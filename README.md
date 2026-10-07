@@ -2,7 +2,9 @@
 
 **AI Engineer and Architect for AECO.** I work where law, architecture, planning and technology meet, on one recurring problem: data fragmentation. Regulations, plans, cadastral records and BIM models describe the same building but sit in different offices, formats and systems.
 
-Architect by training, then business developer for an architecture firm, then an M.Sc. in Sustainable Mobilities at HfWU Nürtingen-Geislingen (2026). My thesis on AI-assisted regulatory intelligence for Stuttgart's building governance was graded 1.0 and 1.3. Based in Ulm, Germany.
+Architect by training, then business developer for an architecture firm, then an M.Sc. in Sustainable Mobilities at HfWU Nürtingen-Geislingen (2026). My thesis on AI-assisted regulatory intelligence for Stuttgart's building governance was graded 1.0 and 1.3 (German grading system). 
+
+Currently based in Ulm, Germany.
 
 ## Five disciplines, one practice
 
