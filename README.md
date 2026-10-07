@@ -183,7 +183,7 @@ I have done client acquisition for an architecture firm myself, so I know the wo
 ## Currently
 
 - Deepening BIM and IFC workflows, with digital twins as the next direction
-- Open to AI engineering roles, research positions and freelance projects
+- Open to Doctoral research positions, AI Architect and engineering roles and freelance projects
 
 ## Contact
 
