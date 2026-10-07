@@ -4,7 +4,7 @@
 
 Architect by training, then business developer for an architecture firm, then an M.Sc. in Sustainable Mobilities at HfWU Nürtingen-Geislingen (2026). My thesis on AI-assisted regulatory intelligence for Stuttgart's building governance was graded 1.0 and 1.3. Based in Ulm, Germany.
 
-## Four disciplines, one practice
+## Five disciplines, one practice
 
 | | What I bring |
 |---|---|
@@ -12,6 +12,19 @@ Architect by training, then business developer for an architecture firm, then an
 | **Architecture and planning** | Design practice, permitting and approval processes, zoning plans, BIM and IFC |
 | **Strategy and business** | Process modelling in BPMN 2.0, stakeholder and expert interviews, evaluation design, client acquisition, CRM and marketing for architecture services |
 | **Technology** | Agentic AI, RAG, computer vision, MCP servers, workflow automation, geodata and data pipelines |
+| **Applied AI research** | Design Science Research, benchmark design with verified answers, failure-mode analysis, model comparison, mixed-methods evaluation, academic writing |
+
+## Applied AI research
+
+Research I have carried out, each piece on a real system:
+
+- **Benchmark design:** a 25-query cross-layer benchmark and an 82-query diagnostic set, each answer verified by hand against the legal text or the plan itself
+- **Failure-mode analysis:** traced wrong answers to their cause (a missing federal law in the corpus, a worked example left in a prompt, retrieval ranking distracted by place names, a misrouting query classifier) and tested a fix for each
+- **Model comparison:** general-purpose vision models (GPT-4o, Gemini 1.5 Pro, Llama, Qwen2.5-VL) against a small domain-trained detector for reading zoning plans
+- **Controlled experiments:** query decomposition by governance level against single-pass retrieval on the same corpus
+- **Calibration:** scoring not only whether an answer is right, but whether the system was confident when it was wrong
+- **Graph analysis:** a knowledge graph of what the system cites, showing that answers anchored to a specific plan rarely go off-topic
+- **User studies:** a usability study with 55 participants, analysed with ANOVA and regression, alongside expert consultation
 
 ## How I approach a project
 
@@ -61,6 +74,7 @@ Business automation built in n8n, where an agent does the routine work and a per
 | Weissenhof geodata study | 73 official LoD2 buildings compared with ALKIS and aerial imagery in 3D. The datasets disagree on the roof of a Le Corbusier house. | Blender, MCP, QGIS |
 | Embodied carbon calculator | Plain-language questions about grey energy of building materials, answered from the Swiss KBOB dataset (SIA 2032 context). | Python, RAG |
 | Claude and Revit through MCP | Natural-language queries on a live Revit model: element counts and a DIN 276 cost estimate worked, heavy scripts crashed the bridge. | Revit 2026, MCP |
+| Python and AI teaching notebooks | A four-module course for real estate students: Python fundamentals, sentiment analysis, sales forecasting, and room-type recognition in property photos with transfer learning. | pandas, scikit-learn, TensorFlow/Keras, Plotly |
 | PakCarbon AI | Competition prototype for carbon credit verification on Karachi's Green Line BRT, using real air-quality data and the ACM0016 method. | CrewAI, FastAPI, PostgreSQL |
 
 Repositories for these are being published one by one.
@@ -119,7 +133,7 @@ Related work: heatwave mapping in QGIS.
 
 ## Experience
 
-- **Research assistant (HiWi), HfWU, 2025 to 2026:** the vCOO compliance system, then Python and AI teaching notebooks and research support
+- **Research assistant (HiWi), HfWU, 2025 to 2026:** built the vCOO compliance system, then developed a four-module set of Jupyter teaching notebooks for a Python and AI course in the real estate department (Python fundamentals, sentiment analysis, sales forecasting, computer vision for real estate) and assisted the students in class
 - **Business Development and Marketing Manager, Disruptive Designs LLC (US architecture firm), 2023 to 2024:** built international client acquisition with a CRM (Snov.io), lead generation, conversion funnels, KPI tracking, and LinkedIn and website content
 - **Architect, SHA Architects, 2021 to 2023:** design, client and contractor coordination, permitting and documentation
 
@@ -131,16 +145,32 @@ Related work: heatwave mapping in QGIS.
 
 ## Work with me
 
-I take on freelance and project work in two areas.
+I take on freelance and project work in four areas.
 
-**AI for regulations, BIM and geodata** (architecture firms, engineering offices, public bodies)
+**AI agents for architecture practices** (architecture and planning offices)
+
+I have worked as an architect, so I start from how an office actually runs a project.
+
+- **Practice audit:** going through your project phases to find where agents save real hours and where they would only add risk
+- **Agents inside your design tools:** asking a Revit or IFC model questions in plain language, such as element counts, parameter checks and first cost estimates
+- **Site and context models from open data:** official building, cadastral and aerial data assembled into a 3D context model by an agent
+- **Regulation checks during design:** zoning and building-code questions answered with sources while the design is still moving
+- **Office workflows:** document tracking, client communication and reporting automated with a person approving each step
+- **Teaching and workshops:** Python and AI for people without a technical background, based on the course material I built for real estate students at HfWU, where I also assisted in class
+
+**Applied AI research and evaluation** (companies, research groups, public bodies)
+
+- **Evaluation of an existing AI system:** a test set with verified answers, scored results, and a report on where and why it fails
+- **Feasibility studies:** can AI do this task reliably, tested on your own documents or data before you commit to building
+- **Model and method comparison:** candidate models or approaches tested side by side on your use case
+- **Research support:** literature review, study design, analysis and writing for papers, funding applications and whitepapers
+
+**AI for regulations and geodata** (engineering offices, public bodies, PropTech)
 
 - **Strategy and scoping:** mapping the current process, interviewing stakeholders, and defining where AI helps and where it does not
 - **Regulation and document assistants:** question answering over building codes, standards or internal documents, with sources
 - **Compliance knowledge tools:** a first-pass map of an AI product against the EU AI Act, GDPR and governance frameworks (a research aid, not legal advice)
 - **Plan reading and geodata integration:** structured data from zoning plans, connected to cadastral and building data
-- **AI for BIM:** connecting language models to Revit and IFC models through MCP
-- **Evaluation:** testing an existing AI system against verified answers before it is trusted
 
 **AI automation for business development and marketing** (AEC firms and small teams)
 
