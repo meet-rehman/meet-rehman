@@ -59,13 +59,16 @@ A research-assistant project at HfWU. The vCOO helps people who build digital pr
 
 `MCP` `LangGraph` `FAISS` `HuggingFace embeddings` `Python`
 
-### Workflow automation with AI agents
-Business automation built in n8n, where an agent does the routine work and a person keeps the final say.
+### Weissenhof geodata study
+The Weissenhofsiedlung in Stuttgart rebuilt in 3D from official open data by an AI agent, to test how far the public datasets agree with each other.
 
-- **Team content pipeline for a travel startup:** a webhook starts an AI agent that researches and drafts a message, an email asks a human to approve or decline, and the approved text is posted to the team's WhatsApp group
-- **Personal productivity agent:** plain-language commands ("schedule gym tomorrow at 7pm") become Google Calendar events and a prioritised task list in Google Sheets, with memory across sessions, in three to six seconds
+- **3D model:** 73 real LoD2 buildings from the state survey's CityGML data, imported and assembled in Blender by an agent through MCP
+- **Cross-check:** the same site compared against ALKIS cadastral parcels and DOP20 aerial imagery
+- **Finding:** the LoD2 data records part of Le Corbusier's double house with a gable roof. The aerial photo confirms it is flat with a terrace.
+- **Render:** a 3D view of the estate highlighting the 11 buildings that survive from 1927
+- **Next:** one agent per data source (cadastre, massing, imagery, terrain, land use) and a coordinator that flags where they disagree
 
-`n8n` `OpenAI` `Perplexity` `WhatsApp API` `Google Calendar` `Google Sheets`
+`Blender` `MCP` `CityGML LoD2` `ALKIS` `QGIS`
 
 ### More projects
 
@@ -73,11 +76,11 @@ Business automation built in n8n, where an agent does the routine work and a per
 |---|---|---|
 | IFC compliance server | An MCP tool that checks IFC geometry against a regulation service. It caught a fabricated value in my own system. | FastMCP, IfcOpenShell |
 | Regulatory knowledge graph | Graph analysis of 91 benchmark answers: answers that cite a specific plan almost never go off-topic, answers that cite nothing often do. | TopologicPy, Python |
-| Weissenhof geodata study | 73 official LoD2 buildings compared with ALKIS and aerial imagery in 3D. The datasets disagree on the roof of a Le Corbusier house. | Blender, MCP, QGIS |
 | Embodied carbon calculator | Plain-language questions about grey energy of building materials, answered from the Swiss KBOB dataset (SIA 2032 context). | Python, RAG |
 | Claude and Revit through MCP | Natural-language queries on a live Revit model: element counts and a DIN 276 cost estimate worked, heavy scripts crashed the bridge. | Revit 2026, MCP |
 | Python and AI teaching notebooks | A four-module course for real estate students: Python fundamentals, sentiment analysis, sales forecasting, and room-type recognition in property photos with transfer learning. | pandas, scikit-learn, TensorFlow/Keras, Plotly |
 | PakCarbon AI | Competition prototype for carbon credit verification on Karachi's Green Line BRT, using real air-quality data and the ACM0016 method. | CrewAI, FastAPI, PostgreSQL |
+| WhatsApp content pipeline | Team automation for a travel startup: an AI agent researches and drafts a message, a person approves it by email, and it is posted to the team's WhatsApp group. | n8n, OpenAI, Perplexity, WhatsApp API |
 
 Repositories for these are being published one by one.
 
@@ -130,6 +133,21 @@ Related work: heatwave mapping in QGIS.
 - **Customer churn prediction for a telecom dataset:** exploratory analysis and preprocessing, then logistic regression, decision trees and random forest compared by AUC-ROC
 
 `KNIME` `scikit-learn` `Excel`
+
+</details>
+
+<details>
+<summary><b>Certificates and short courses</b></summary>
+
+<br>
+
+| Course | Provider | Completed |
+|---|---|---|
+| Supervised Machine Learning: Regression and Classification (grade 99.66%) | DeepLearning.AI and Stanford Online, via Coursera | March 2025 |
+| Advertising on LinkedIn | LinkedIn Learning | August 2024 |
+| BIM Manager: Managing Revit | LinkedIn Learning | May 2020 |
+| Geometry in Design: In the Footsteps of Masters (workshop) | Department of Architecture and Planning, NED University, Karachi | March 2019 |
+| Certificate in Information Technology (four months) | Skill Development Council Karachi | 2014 |
 
 </details>
 
