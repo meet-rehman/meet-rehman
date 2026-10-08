@@ -20,13 +20,13 @@ Currently based in Ulm, Germany.
 
 Research I have carried out, each piece on a real system:
 
-- **Benchmark design:** a 25-query cross-layer benchmark and an 82-query diagnostic set, each answer verified by hand against the legal text or the plan itself
-- **Failure-mode analysis:** traced wrong answers to their cause (a missing federal law in the corpus, a worked example left in a prompt, retrieval ranking distracted by place names, a misrouting query classifier) and tested a fix for each
-- **Model comparison:** general-purpose vision models (GPT-4o, Gemini 1.5 Pro, Llama, Qwen2.5-VL) against a small domain-trained detector for reading zoning plans
+- **Benchmark design:** a 25-query cross-layer benchmark with answers verified by hand against the legal text or the plan itself, and an 82-query diagnostic set for failure patterns
+- **Failure-mode analysis:** traced wrong answers to their cause (a missing federal law in the corpus, a worked example left in a prompt, retrieval ranking distracted by place names, a misrouting query classifier), fixed the first three and documented what remains open
+- **Model comparison:** general-purpose vision-language models (GPT-4o vision and Qwen) against a small domain-trained detector for reading zoning plans
 - **Controlled experiments:** query decomposition by governance level against single-pass retrieval on the same corpus
 - **Calibration:** scoring not only whether an answer is right, but whether the system was confident when it was wrong
 - **Graph analysis:** a knowledge graph of what the system cites, showing that answers anchored to a specific plan rarely go off-topic
-- **User studies:** a usability study with 55 participants, analysed with ANOVA and regression, alongside expert consultation
+- **User studies:** a usability study with 55 participants, conducted with a student research team and analysed with ANOVA and regression, alongside expert consultation
 
 ## How I approach a project
 
@@ -36,18 +36,18 @@ My view is that trustworthy AI for regulated domains will come from agents that 
 
 ## Featured work
 
-### Stuttgart Building Regulations AI
+### [Stuttgart Building Regulations AI](https://github.com/meet-rehman/digital-building-permit-stuttgart)
 A regulation assistant that answers one question three ways and compares the results, across three levels of government: federal, state and municipal.
 
-- **Text:** retrieval over 12,253 chunks from 363 source documents (BauGB, BauNVO, LBO BW, Stuttgart Bebauungspläne and local statutes)
+- **Text:** retrieval over 12,701 chunks of regulation text (BauGB, BauNVO, LBO BW, Stuttgart Bebauungspläne and local statutes)
 - **Vision:** a YOLOv8 + EasyOCR pipeline that reads the drawing templates on zoning plans
 - **Space:** ALKIS cadastral data to resolve an address or plot number to its parcel, area and built coverage
 
-Built and deployed as a working web application, and reviewed by the Baurechtsamt Stuttgart. I benchmarked all three layers against verified answers and documented the failures, including a 32% off-topic rate on topics with thin corpus coverage and what fixed it.
+Built and deployed as a working web application. The problem and the process model were checked with Stuttgart's building law office and city planning office. I benchmarked all three layers against verified answers and documented the failures: which ones I fixed, and which are still open, such as an off-topic answer on 32% of a wider question sample.
 
 `CrewAI` `FastAPI` `OpenAI` `YOLOv8` `EasyOCR` `GeoPandas` `QGIS`
 
-Source code is private. A walkthrough or demo is available on request.
+Source code is private. [Results, figures and failure analysis](https://github.com/meet-rehman/digital-building-permit-stuttgart). A walkthrough or demo is available on request.
 
 ### vCOO: Virtual Chief Compliance Officer
 A research-assistant project at HfWU. The vCOO helps people who build digital products with no-code and generative AI tools to see which rules apply to them.
@@ -59,30 +59,30 @@ A research-assistant project at HfWU. The vCOO helps people who build digital pr
 
 `MCP` `LangGraph` `FAISS` `HuggingFace embeddings` `Python`
 
-### Weissenhof geodata study
+### [Weissenhof geodata study](https://github.com/meet-rehman/geodata-ai-integration)
 The Weissenhofsiedlung in Stuttgart rebuilt in 3D from official open data by an AI agent, to test how far the public datasets agree with each other.
 
-- **3D model:** 73 real LoD2 buildings from the state survey's CityGML data, imported and assembled in Blender by an agent through MCP
-- **Cross-check:** the same site compared against ALKIS cadastral parcels and DOP20 aerial imagery
-- **Finding:** the LoD2 data records part of Le Corbusier's double house with a gable roof. The aerial photo confirms it is flat with a terrace.
+- **3D model:** 73 real LoD2 building objects from the state survey's CityGML data, imported and assembled in Blender by an AI coding agent
+- **Cross-check:** footprints compared against the ALKIS cadastre (69 of 69 buildings match, largest gap 3.4 cm), then against DOP20 aerial imagery and the state's new live API
+- **Findings:** 4 small canopies are buildings in one official dataset and structures in the other. LoD2 gives part of Le Corbusier's double house gable roofs, while the aerial photo shows a flat roof.
 - **Render:** a 3D view of the estate highlighting the 11 buildings that survive from 1927
 - **Next:** one agent per data source (cadastre, massing, imagery, terrain, land use) and a coordinator that flags where they disagree
 
-`Blender` `MCP` `CityGML LoD2` `ALKIS` `QGIS`
+`Blender` `Python` `CityGML LoD2` `ALKIS` `OGC API Features` `QGIS`
 
 ### More projects
 
 | Project | Highlight | Built with |
 |---|---|---|
 | IFC compliance server | An MCP tool that checks IFC geometry against a regulation service. It caught a fabricated value in my own system. | FastMCP, IfcOpenShell |
-| Regulatory knowledge graph | Graph analysis of 91 benchmark answers: answers that cite a specific plan almost never go off-topic, answers that cite nothing often do. | TopologicPy, Python |
-| Embodied carbon calculator | Plain-language questions about grey energy of building materials, answered from the Swiss KBOB dataset (SIA 2032 context). | Python, RAG |
-| Claude and Revit through MCP | Natural-language queries on a live Revit model: element counts and a DIN 276 cost estimate worked, heavy scripts crashed the bridge. | Revit 2026, MCP |
-| Python and AI teaching notebooks | A four-module course for real estate students: Python fundamentals, sentiment analysis, sales forecasting, and room-type recognition in property photos with transfer learning. | pandas, scikit-learn, TensorFlow/Keras, Plotly |
+| Regulatory knowledge graph | Graph analysis of what the system cites in its benchmark answers: answers that cite a specific plan almost never go off-topic, answers that cite nothing often do. | TopologicPy, Python |
+| [Embodied carbon prototype](https://github.com/meet-rehman/kbob-embodied-carbon) | Plain-language material descriptions matched to the Swiss KBOB life cycle data. A prototype, published with its errors documented. | Python, sentence embeddings |
+| [Claude and Revit through MCP](https://github.com/meet-rehman/revit-mcp-case-study) | Natural-language queries on a live Revit model: element counts and areas worked, two cost estimates for the same floor differed by a factor of two, heavy scripts broke the connection. | Revit 2026, MCP |
+| [Python and AI teaching notebooks](https://github.com/meet-rehman/python-ai-for-real-estate) | A four-module course for business and real estate students: Python fundamentals, sentiment analysis, sales forecasting, and room-type recognition in property photos with transfer learning. | pandas, scikit-learn, TensorFlow/Keras, Plotly |
 | PakCarbon AI | Competition prototype for carbon credit verification on Karachi's Green Line BRT, using real air-quality data and the ACM0016 method. | CrewAI, FastAPI, PostgreSQL |
 | WhatsApp content pipeline | Team automation for a travel startup: an AI agent researches and drafts a message, a person approves it by email, and it is posted to the team's WhatsApp group. | n8n, OpenAI, Perplexity, WhatsApp API |
 
-Repositories for these are being published one by one.
+The remaining repositories are being published one by one.
 
 ## Training and coursework projects
 
