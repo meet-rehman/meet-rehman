@@ -40,7 +40,7 @@ My view is that trustworthy AI for regulated domains will come from agents that 
 A regulation assistant that answers one question three ways and compares the results, across three levels of government: federal, state and municipal.
 
 - **Text:** retrieval over 12,253 chunks from 363 source documents (BauGB, BauNVO, LBO BW, Stuttgart Bebauungspläne and local statutes)
-- **Vision:** a YOLOv8 + EasyOCR pipeline that reads the Nutzungsschablone on zoning plans (mAP50 0.705)
+- **Vision:** a YOLOv8 + EasyOCR pipeline that reads the drawing templates on zoning plans
 - **Space:** ALKIS cadastral data to resolve an address or plot number to its parcel, area and built coverage
 
 Built and deployed as a working web application, and reviewed by the Baurechtsamt Stuttgart. I benchmarked all three layers against verified answers and documented the failures, including a 32% off-topic rate on topics with thin corpus coverage and what fixed it.
