@@ -50,7 +50,7 @@ Built and deployed as a working web application. The problem and the process mod
 Source code is private. [Results, figures and failure analysis](https://github.com/meet-rehman/digital-building-permit-stuttgart). A walkthrough or demo is available on request.
 
 ### vCOO: Virtual Chief Compliance Officer
-A research-assistant project at HfWU. The vCOO helps people who build digital products with no-code and generative AI tools to see which rules apply to them.
+A research-assistant project at HfWU. Status: concept with an early prototype. The vCOO is meant to help people who build digital products with no-code and generative AI tools to see which rules apply to them.
 
 - **Knowledge layer:** five MCP servers, one per framework: EU AI Act, GDPR, ISO 37301, COBIT and NIST, each with its own vector store and source citations
 - **Prototype:** a test scenario (an AI mobility adviser for city planners that uses GPS data) run through all five frameworks, producing risk levels, cited passages and recommended actions
@@ -60,15 +60,15 @@ A research-assistant project at HfWU. The vCOO helps people who build digital pr
 `MCP` `LangGraph` `FAISS` `HuggingFace embeddings` `Python`
 
 ### [Weissenhof geodata study](https://github.com/meet-rehman/geodata-ai-integration)
-The Weissenhofsiedlung in Stuttgart rebuilt in 3D from official open data by an AI agent, to test how far the public datasets agree with each other.
+The Weissenhofsiedlung in Stuttgart rebuilt in 3D from official open data by Claude working in Blender through MCP, to test how far the public datasets agree with each other.
 
-- **3D model:** 73 real LoD2 building objects from the state survey's CityGML data, imported and assembled in Blender by an AI coding agent
+- **3D model:** 73 real LoD2 building objects from the state survey's CityGML data, imported and assembled in Blender by Claude through a Blender MCP connection
 - **Cross-check:** footprints compared against the ALKIS cadastre (69 of 69 buildings match, largest gap 3.4 cm), then against DOP20 aerial imagery and the state's new live API
 - **Findings:** 4 small canopies are buildings in one official dataset and structures in the other. LoD2 gives part of Le Corbusier's double house gable roofs, while the aerial photo shows a flat roof.
 - **Render:** a 3D view of the estate highlighting the 11 buildings that survive from 1927
 - **Next:** one agent per data source (cadastre, massing, imagery, terrain, land use) and a coordinator that flags where they disagree
 
-`Blender` `Python` `CityGML LoD2` `ALKIS` `OGC API Features` `QGIS`
+`Blender` `MCP` `Python` `CityGML LoD2` `ALKIS` `OGC API Features` `QGIS`
 
 ### More projects
 
@@ -153,7 +153,7 @@ Related work: heatwave mapping in QGIS.
 
 ## Experience
 
-- **Research assistant (HiWi), HfWU, 2025 to 2026:** built the vCOO compliance system, then developed a four-module set of Jupyter teaching notebooks for a Python and AI course in the real estate department (Python fundamentals, sentiment analysis, sales forecasting, computer vision for real estate) and assisted the students in class
+- **Research assistant (HiWi), HfWU, 2025 to 2026:** developed the vCOO compliance concept and its MCP prototype, then developed a four-module set of Jupyter teaching notebooks for a Python and AI course in the real estate department (Python fundamentals, sentiment analysis, sales forecasting, computer vision for real estate) and assisted the students in class
 - **Business Development and Marketing Manager, Disruptive Designs LLC (US architecture firm), 2023 to 2024:** built international client acquisition with a CRM (Snov.io), lead generation, conversion funnels, KPI tracking, and LinkedIn and website content
 - **Architect, SHA Architects, 2021 to 2023:** design, client and contractor coordination, permitting and documentation
 
