@@ -49,10 +49,10 @@ Built and deployed as a working web application. The problem and the process mod
 
 Source code is private. [Results, figures and failure analysis](https://github.com/meet-rehman/digital-building-permit-stuttgart). A walkthrough or demo is available on request.
 
-### vCOO: Virtual Chief Compliance Officer
+### [vCOO: Virtual Chief Compliance Officer](https://github.com/meet-rehman/vcoo-compliance-mcp)
 A research-assistant project at HfWU. Status: knowledge layer and a scripted prototype are built, the agent layer is planned. The vCOO is meant to help people who build digital products with no-code and generative AI tools to see which rules apply to them.
 
-- **Knowledge layer (built):** five MCP servers, one per framework: EU AI Act, GDPR, ISO, COBIT and NIST. Each one indexes its documents in a FAISS vector store and returns passages with source and page
+- **Knowledge layer (built):** five MCP servers, one per framework: EU AI Act, GDPR, ISO 27001, COBIT and NIST. Each one indexes its documents in a FAISS vector store and returns passages with source and page
 - **Scripted prototype (built):** a test scenario (an AI mobility adviser for city planners that uses GPS data) queried against the frameworks in a fixed order. Four of five returned passages, 24 in total. The risk levels and recommended actions in the report were written by me, not generated
 - **Research bot (first version):** a scraper for regulatory updates on EUR-Lex. In the test run the live fetch failed and it fell back to a stored list of five updates
 - **Planned, not built:** LangGraph agents for risk mapping, recommendations and documentation, and an evaluation against expert judgment
