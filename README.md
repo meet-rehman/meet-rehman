@@ -25,7 +25,7 @@ Research I have carried out, each piece on a real system:
 - **Model comparison:** general-purpose vision-language models (GPT-4o vision and Qwen) against a small domain-trained detector for reading zoning plans
 - **Controlled experiments:** query decomposition by governance level against single-pass retrieval on the same corpus
 - **Calibration:** scoring not only whether an answer is right, but whether the system was confident when it was wrong
-- **Graph analysis:** a knowledge graph of what the system cites, showing that answers anchored to a specific plan rarely go off-topic
+- **Graph analysis:** a conceptual test of extracting which rule overrides which with a local language model, and a graph of the benchmark findings in which two failure patterns show up as hubs
 - **User studies:** a usability study with 55 participants, conducted with a student research team and analysed with ANOVA and regression, alongside expert consultation
 
 ## How I approach a project
@@ -74,8 +74,8 @@ The Weissenhofsiedlung in Stuttgart rebuilt in 3D from official open data by Cla
 
 | Project | Highlight | Built with |
 |---|---|---|
-| IFC compliance server | An MCP tool that checks IFC geometry against a regulation service. It caught a fabricated value in my own system. | FastMCP, IfcOpenShell |
-| Regulatory knowledge graph | Graph analysis of what the system cites in its benchmark answers: answers that cite a specific plan almost never go off-topic, answers that cite nothing often do. | TopologicPy, Python |
+| [IFC compliance check as an MCP tool](https://github.com/meet-rehman/ifc-compliance-mcp) | An MCP tool that compares the built coverage of a plot, stored in an IFC file, with the limit my regulation system states. Prototype. It showed from outside that the system was filling in limits it had not found. | FastMCP, IfcOpenShell |
+| [Governance graph for building regulations](https://github.com/meet-rehman/regulation-knowledge-graph) | Conceptual work: a local model extracts which rule overrides which across federal, state and municipal law. 16 of 20 test sentences correct on the first pass, with the misses traced to one cause. | Ollama, NetworkX, TopologicPy |
 | [Embodied carbon prototype](https://github.com/meet-rehman/kbob-embodied-carbon) | Plain-language material descriptions matched to the Swiss KBOB life cycle data. A prototype, published with its errors documented. | Python, sentence embeddings |
 | [Claude and Revit through MCP](https://github.com/meet-rehman/revit-mcp-case-study) | Natural-language queries on a live Revit model: element counts and areas worked, two cost estimates for the same floor differed by a factor of two, heavy scripts broke the connection. | Revit 2026, MCP |
 | [Python and AI teaching notebooks](https://github.com/meet-rehman/python-ai-for-real-estate) | A four-module course for business and real estate students: Python fundamentals, sentiment analysis, sales forecasting, and room-type recognition in property photos with transfer learning. | pandas, scikit-learn, TensorFlow/Keras, Plotly |
@@ -111,9 +111,9 @@ The foundations under the work above. These are course projects, labelled as suc
 
 <br>
 
-Seminar project on mobility planning in Baden-Württemberg:
+Seminar project on mobility planning in Baden-Württemberg ([write-up and maps](https://github.com/meet-rehman/radnetz-parking-analysis)):
 
-- Processed more than 200,000 spatial data points (linestrings and coordinates) from open government data with Pandas, NumPy, GeoPandas and Shapely
+- Processed 200,000 cycle network segments and 4,412 parking sites from open government data with Pandas, NumPy, GeoPandas and Shapely
 - Buffer analysis and hub-distance calculations for proximity mapping
 - K-Means clustering of parking capacity
 - Heatmaps and spatial visualisations in QGIS and Matplotlib
