@@ -4,7 +4,7 @@
 
 Architect by training, then business developer for an architecture firm, then an M.Sc. in Sustainable Mobilities at HfWU Nürtingen-Geislingen (2026). My thesis on AI-assisted regulatory intelligence for Stuttgart's building governance was graded 1.0 and 1.3 (German grading system). 
 
-Currently based in Ulm, Germany.
+Currently based in Ulm, Germany. Website: [meet-rehman.github.io](https://meet-rehman.github.io)
 
 ## Five disciplines, one practice
 
@@ -207,4 +207,4 @@ I have done client acquisition for an architecture firm myself, so I know the wo
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/meetrehmann)
+[Website](https://meet-rehman.github.io) · [LinkedIn](https://www.linkedin.com/in/meetrehmann)
